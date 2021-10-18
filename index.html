@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Responsive Dashboard</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="./style.css">
     <!--Boxicons CDN Link-->
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 
@@ -23,54 +23,63 @@
             <li>
                 <i class='bx bx-search'></i>
                 <input type="text" placeholder="Search...">
+                <span class="tooltip">Search</span>
             </li>
 
             <li>
                 <a href="#">
                     <i class='bx bx-grid-alt'></i>
                     <span class="links_name">Dashboard</span>
+                    <span class="tooltip">Dashboard</span>
                 </a>
             </li>
             <li>
                 <a href="#">
                     <i class='bx bx-user' ></i>
                     <span class="links_name">User</span>
+                    <span class="tooltip">User</span>
                 </a>
             </li>
             <li>
                 <a href="#">
                     <i class='bx bx-chat' ></i>
                     <span class="links_name">Messages</span>
+                    <span class="tooltip">Messages</span>
                 </a>
             </li>
             <li>
                 <a href="#">
                     <i class='bx bx-pie-chart-alt-2' ></i>
                     <span class="links_name">Analytics</span>
+                    <span class="tooltip">Analytics</span>
                 </a>
             </li>
             <li>
                 <a href="#">
                     <i class='bx bx-folder' ></i>
                     <span class="links_name">File Manager</span>
+                    <span class="tooltip">Files</span>
                 </a>
             </li>
             <li>
                 <a href="#">
                     <i class='bx bx-cart' ></i>
                     <span class="links_name">Order</span>
+                    <span class="tooltip">Order</span>
                 </a>
             </li>
             <li>
                 <a href="#">
                     <i class='bx bx-heart' ></i>
                     <span class="links_name">Saved</span>
+                    <span class="tooltip">Saved</span>
                 </a>
             </li>
             <li>
                 <a href="#">
                     <i class='bx bx-cog' ></i>
                     <span class="links_name">Setting</span>
+                    <span class="tooltip">Setting</span>
                 </a>
             </li>
 
@@ -88,6 +97,24 @@
             </div>
         </div>
     </div>
+
+    <div class="home_content">
+        <div class="text">Home Content</div>
+    </div>
+
+    <script>
+        let btn = document.querySelector("#btn")
+        let sidebar = document.querySelector(".sidebar")
+        let searchBtn = document.querySelector(".bx-search")
+
+        btn.onclick = function(){
+            sidebar.classList.toggle("active");
+        }
+
+        searchBtn.onclick = function(){
+            sidebar.classList.toggle("active");
+        }
+    </script>
 
 </body>
 
